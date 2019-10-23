@@ -1,0 +1,71 @@
+/* navbar */
+header {
+  box-sizing: content-box;
+  padding: 0 20px;
+  height: 56px;
+  line-height: 56px;
+  border-bottom: 1px solid #eee;
+  /*
+  header 的高度可以写一个固定的高度，也可以由内容去撑开。
+  但当前的场景下，写一个固定的高度比较合适。因为由内容去撑开的话，很容易导致上下的缝隙不太合适。
+  如果写一个固定的 height，然后 line-height 等于这个 height，
+  那很容易就实现里边的整个元素都处于这个区域的正中心。
+  */
+  /*
+  但要注意：由于继承性，它的子元素也会去继承 line-height 等于 56px，故若子元素有特别需要，
+  要单独设置 line-height 的值。
+  */
+}
+
+header:after {
+  content: "";
+  display: block;
+  clear: both;
+  /*
+  给 header 清除浮动，当然也可以在 HTML 文档中给 header 加一个类 clearfix，
+  用通用样式清除浮动。之所以我们加在这里，主要是为了“好看”！
+  */
+}
+
+header .logo {
+  float: left;
+  height: 56px;
+}
+header .logo > img {
+  height: 50px;
+  /* 由于 header 一开始就设置了 height=line-height，故 logo 的高度设置好后，宽度就自适应了。 */
+}
+header .navbar {
+  float: left;
+}
+header .navbar a {
+  display: block;
+  /*
+  由于要使 a 链接可点击范围变大，所以要加 padding，但单就 a 链接来说，它是”行内元素“，
+  是不能加 padding 的，所以要使其显示为“block”。
+  */
+  height: 56px;
+  /*
+  加了 padding，如果不加高度的话，很容易导致上下 padding 不知道是多少。
+  所以加一个 height ——和我们 header 相应的值相等。
+  */
+  padding: 0 10px;
+  font-size: 17px;
+  color: #333;
+}
+header .navbar a:hover {
+  background-color: #eee;
+}
+header .navbar .active a {
+  color: #e86f5e;
+}
+header .navbar .active a:hover {
+  background-color: #fff;
+  /*
+  由于处于 active 状态的“发现”，当鼠标放上去时，是没有背景色的，但如果只加这个白色，
+  那么“白色”会覆盖下边的“边框”，故必须在上边写上以下代码（看上边对应的符号“❗️”）：
+    header {
+      box-sizing: content-box;
+    }
+  */
+}

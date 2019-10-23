@@ -30,8 +30,22 @@ body {
   width: 950px;
   margin-right: auto;
   margin-left: auto;
+  /*
+  这几行代码是为了水平”居中“，但在通用样式里边，我们一般不要去设 margin-top 的值，
+  因为后边如果特定样式需要设置这个值，我们再单独拿出来设置就可以了。
+  */
 }
-/*
-这几行代码是为了水平”居中“，但在通用样式里边，我们一般不要去设 margin-top 的值，
-因为后边如果特定样式需要设置这个值，我们再单独拿出来设置就可以了。
-*/
+
+.tip {
+  padding: 2px 4px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  /*
+  为了防止元素去继承任何父元素的 line-height，我们这里单独把它的 line-height 设置为 1，
+  即和 font-size 值一样，以便后边给 line-height 做特定样式设置。
+  */
+  color: #fff;
+  background-color: #e86f5e;
+  border-radius: 8px;
+}
