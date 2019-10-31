@@ -84,3 +84,172 @@ header .navbar > li {
   当然，要实现这个功能，给 li 加 margin 或给 a 加 margin 也可以。
   */
 }
+header .navbar .child {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 120px;
+  line-height: 40px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.1);
+  /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+}
+header .navbar .child a {
+  line-height: 40px;
+}
+header .navbar .child .tip {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+
+/* search area */
+header .search {
+  position: relative;
+  float: left;
+  margin-left: 30px;
+}
+header .search input {
+  width: 200px;
+  padding: 0 20px;
+  font-size: 15px;
+  line-height: 36px;
+  background-color: #eee;
+  border: none;
+  border-radius: 18px;
+  outline: none;
+  transition: all .3s;
+  /* 让鼠标在它身上操作的时候，它的变化是缓慢的。 */
+  /*
+  💡transition 可以用来定义“转场”的“过渡”效果，语法为：
+  transition: property duration timing-function delay;
+
+  注释：1property 用于指定 CSS 属性的 name，transition 效果；
+        2duration 用于指定 transition 效果需要多少时间才能完成；
+        3timing-function 用于指定 transition 效果的转速曲线；
+        4delay 用于定义 transition 效果开始的时候。
+  */
+}
+header .search input:focus {
+  width: 240px;
+}
+header .search input:focus ~ .search-panel {
+  display: block;
+}
+header .search input:focus ~ .icon-search {
+  color: #fff;
+  background-color: #969696;
+}
+header .search .icon-search{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  color: #aaa;
+  line-height: 32px;
+  /* 样式进行重置，height=line-height 实现字体图标在设置的盒子里“垂直居中”。 */
+  text-align: center;
+  border-radius: 50%;
+}
+header .search-panel {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 250px;
+  padding: 16px;
+  line-height: 1;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.1);
+}
+header .search-panel:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 30px;
+  display: block;
+  width: 14px;
+  background-color: #fff;
+  transform: rotateZ(45deg);
+  box-shadow: -2px -2px 2px -2px rgba(0, 0, 0, 0.1);
+}
+header .search-panel h3 {
+  color: #888;
+  font-weight: normal;
+}
+header .search-panel .change {
+  float: right;
+  font-size: 13px;
+  font-weight: normal;
+  color: #888;
+}
+header .search-panel .labels {
+  margin-top: 10px;
+}
+header .search-panel .label {
+  float: left;
+  margin: 10px 10px 0 0;
+  padding: 2px 4px;
+  color: #888;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+header .search-panel .label:hover {
+  border-color: #888;
+}
+
+
+/* extra */
+header .extra {
+  float: right;
+}
+header .extra a {
+  color: #333;
+}
+header .extra .icon-textsize {
+  float: left;
+  font-size: 30px;
+  color: #333;
+}
+header .extra .user {
+  position: relative;
+  float: left;
+  margin-left: 20px;
+  padding: 0 10px;
+}
+header .extra .user:hover {
+  background-color: #eee;
+}
+header .extra .child {
+  position: absolute;
+  left: 0;
+  display: none;
+  width: 160px;
+  line-height: 54px;
+  background-color: #fff;
+  box-shadow: 0 1px 4px 2px rgba(0, 0, 0, .1);
+}
+header .extra .child a:hover {
+  background-color: #eee;
+}
+header .extra .avatar {
+  width: 40px;
+  height: 40px;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+header .extra .icon-down {
+  vertical-align: middle;
+}
+header .extra .action-write {
+  float: left;
+  margin: 10px 0 0 20px;
+  padding: 10px 20px;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  background-color: #e56e5d;
+  border-radius: 30px;
+}
