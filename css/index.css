@@ -31,13 +31,16 @@ header .logo {
   float: left;
   height: 56px;
 }
+
 header .logo > img {
   height: 50px;
   /* 由于 header 一开始就设置了 height=line-height，故 logo 的高度设置好后，宽度就自适应了。 */
 }
+
 header .navbar {
   float: left;
 }
+
 header .navbar a {
   display: block;
   /*
@@ -53,12 +56,15 @@ header .navbar a {
   font-size: 17px;
   color: #333;
 }
+
 header .navbar a:hover {
   background-color: #eee;
 }
+
 header .navbar .active a {
   color: #e86f5e;
 }
+
 header .navbar .active a:hover {
   background-color: #fff;
   /*
@@ -75,6 +81,7 @@ header .navbar > li .tip {
   top: 10px;
   right: -8px;
 }
+
 header .navbar > li {
   position: relative;
   float: left;
@@ -84,6 +91,7 @@ header .navbar > li {
   当然，要实现这个功能，给 li 加 margin 或给 a 加 margin 也可以。
   */
 }
+
 header .navbar .child {
   position: absolute;
   z-index: 1;
@@ -94,9 +102,11 @@ header .navbar .child {
   box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.1);
   /* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
 }
+
 header .navbar .child a {
   line-height: 40px;
 }
+
 header .navbar .child .tip {
   position: absolute;
   top: 10px;
@@ -110,6 +120,7 @@ header .search {
   float: left;
   margin-left: 30px;
 }
+
 header .search input {
   width: 200px;
   padding: 0 20px;
@@ -131,16 +142,20 @@ header .search input {
         4delay 用于定义 transition 效果开始的时候。
   */
 }
+
 header .search input:focus {
   width: 240px;
 }
+
 header .search input:focus ~ .search-panel {
   display: block;
 }
+
 header .search input:focus ~ .icon-search {
   color: #fff;
   background-color: #969696;
 }
+
 header .search .icon-search{
   position: absolute;
   top: 10px;
@@ -153,6 +168,7 @@ header .search .icon-search{
   text-align: center;
   border-radius: 50%;
 }
+
 header .search-panel {
   position: absolute;
   z-index: 1;
@@ -164,6 +180,7 @@ header .search-panel {
   border-radius: 6px;
   box-shadow: 0 1px 4px 2px rgba(0, 0, 0, 0.1);
 }
+
 header .search-panel:before {
   content: "";
   position: absolute;
@@ -175,19 +192,23 @@ header .search-panel:before {
   transform: rotateZ(45deg);
   box-shadow: -2px -2px 2px -2px rgba(0, 0, 0, 0.1);
 }
+
 header .search-panel h3 {
   color: #888;
   font-weight: normal;
 }
+
 header .search-panel .change {
   float: right;
   font-size: 13px;
   font-weight: normal;
   color: #888;
 }
+
 header .search-panel .labels {
   margin-top: 10px;
 }
+
 header .search-panel .label {
   float: left;
   margin: 10px 10px 0 0;
@@ -196,6 +217,7 @@ header .search-panel .label {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
 header .search-panel .label:hover {
   border-color: #888;
 }
@@ -205,23 +227,32 @@ header .search-panel .label:hover {
 header .extra {
   float: right;
 }
+
 header .extra a {
   color: #333;
 }
+
 header .extra .icon-textsize {
   float: left;
   font-size: 30px;
   color: #333;
 }
+
 header .extra .user {
   position: relative;
   float: left;
   margin-left: 20px;
   padding: 0 10px;
 }
+
 header .extra .user:hover {
   background-color: #eee;
 }
+
+header .extra .user:hover .child {
+  display: block;
+}
+
 header .extra .child {
   position: absolute;
   left: 0;
@@ -231,18 +262,28 @@ header .extra .child {
   background-color: #fff;
   box-shadow: 0 1px 4px 2px rgba(0, 0, 0, .1);
 }
+
+header .extra .child a {
+  display: block;
+  font-size: 13px;
+  padding: 0 10px;
+}
+
 header .extra .child a:hover {
   background-color: #eee;
 }
+
 header .extra .avatar {
   width: 40px;
   height: 40px;
   vertical-align: middle;
   border-radius: 50%;
 }
+
 header .extra .icon-down {
   vertical-align: middle;
 }
+
 header .extra .action-write {
   float: left;
   margin: 10px 0 0 20px;
@@ -252,4 +293,149 @@ header .extra .action-write {
   color: #fff;
   background-color: #e56e5d;
   border-radius: 30px;
+}
+
+/* aside */
+
+section {
+  margin-top: 30px;
+}
+
+aside {
+  float: right;
+  width: 280px;
+}
+
+aside .panels img {
+  width: 280px;
+  height: 45px;
+}
+
+aside .download {
+  position: relative;
+  display: block;
+  /* 使 a 链接以 block 显示，使之能包裹 h3、p */
+  margin-top: 10px;
+  padding: 10px 22px;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+}
+
+aside .download img {
+  float: left;
+  width: 56px;
+  height: 56px;
+}
+
+aside .download h3 {
+  margin-left: 66px;
+  /* 由于二维码图片浮动了，所以肯定会紧挨着 h3 ，因此我们加了一个 margin 隔开。 */
+  font-weight: normal;
+  color: #333;
+}
+
+aside .download p {
+  margin-left: 66px;
+  color: #000;
+}
+
+aside .download .tooltip {
+  position: absolute;
+  top: -198px;
+  left: calc(50% - 91px);
+  display: none;
+  width: 182px;
+  height: 182px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ececec;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px 2px rgba(0, 0, 0, .3);
+}
+
+aside .download .tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  margin-left: -8px;
+  transform: rotateZ(45deg);
+  background: #fff;
+  border-right: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+}
+
+aside .download:hover .tooltip {
+  display: block;
+}
+
+aside .download .tooltip img {
+  width: 100%;
+  height: 100%;
+}
+
+aside .recommand {
+  margin-top: 30px;
+}
+
+aside .recommand > h3 {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+}
+
+aside .recommand h3 .change {
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+
+aside .recommand .avatar {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ececec;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+aside .recommand .item {
+  margin-top: 15px;
+}
+
+aside .recommand .avatar img {
+  width: 100%;
+  height: 100%;
+}
+
+aside .recommand .item h4 {
+  margin-left: 60px;
+}
+
+aside .recommand .username {
+  color: #333;
+}
+
+aside .recommand .notice {
+  float: right;
+  color: #42c02e;
+}
+
+aside .recommand .item p {
+  margin-left: 60px;
+  color: #999;
+}
+
+aside .recommand .more {
+  display: block;
+  margin-top: 15px;
+  color: #999;
+  line-height: 30px;
+  text-align: center;
+  background-color: #f7f7f7;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
