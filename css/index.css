@@ -439,3 +439,162 @@ aside .recommand .more {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+/* main */
+main {
+  margin-right: 318px;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel .panels {
+  width: 2528px;
+}
+
+.carousel .panels > a {
+  float: left;
+  width: 632px;
+  height: 270px;
+}
+
+.carousel img {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .carousel-btn {
+  position: absolute;
+  top: calc(50% - 25px);
+  display: none;
+  width: 40px;
+  height: 50px;
+  font-size: 28px;
+  line-height: 50px;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.carousel:hover .carousel-btn {
+  display: block;
+}
+
+.carousel .btn-left {
+  left: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.carousel .btn-right {
+  right: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.carousel .bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel .bullets > li {
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.carousel .bullets > li:active {
+  background-color: #fff;
+}
+
+.label-group {
+  margin-top: 20px;
+}
+
+.label-group .label {
+  display: inline-block;
+  margin: 10px 20px 10px 0;
+  vertical-align: middle;
+  padding-right: 10px;
+  color: #333;
+  background-color: #f7f7f7;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.label-group img {
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.label-group .more {
+  color: #787878;
+  vertical-align: middle;
+}
+
+/* content */
+.content .item {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px 0;
+  border-top: 1px solid #ccc;
+}
+
+.content .item .cover {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 140px;
+  height: 117px;
+  margin-top: -58px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.content .item .cover img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+.content .item .details {
+  margin-right: 160px;
+}
+
+.content .item .title {
+  display: block;
+  margin-top: 10px;
+  color: #333;
+}
+
+.content .item .title h2 {
+  font-size: 20px;
+}
+
+.content .item .foot {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.content .item .username {
+  color: #999;
+}
+
+.content .item .username:hover {
+  color: #333;
+}
+
+.content .item .foot span {
+  color: #999;
+}
+
+.content .item .foot .iconfont {
+  margin-left: 10px;
+}
