@@ -598,3 +598,101 @@ main {
 .content .item .foot .iconfont {
   margin-left: 10px;
 }
+
+/* to-top */
+.to-top {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.to-top:hover {
+  background-color: #f8f8f8;
+}
+
+.to-top .up {
+  font-size: 20px;
+}
+
+.to-top .tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  width: 63px;
+  color: #fff;
+  line-height: 1.8;
+  text-align: center;
+  background-color: #000;
+  border-radius: 4px;
+  display: none;
+}
+
+.to-top:hover .tooltip {
+  display: block;
+}
+
+.to-top .tooltip:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  right: -6px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 6px;
+  border-color: transparent transparent transparent #000;
+}
+
+/* footer */
+footer {
+  margin-top: 20px;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+footer a {
+  color: #969696;
+}
+
+footer a:hover {
+  color: #333;
+}
+
+footer em {
+  color: #969696;
+}
+
+footer p {
+  color: #c8c8c8;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 840px) {
+  .layout {
+    width: auto;
+  }
+  body {
+    padding: 10px 20px;
+  }
+  .extra,
+  .search {
+    display: none;
+  }
+  aside {
+    float: none;
+    width: auto;
+  }
+  main {
+    margin-right: 0;
+  }
+}
